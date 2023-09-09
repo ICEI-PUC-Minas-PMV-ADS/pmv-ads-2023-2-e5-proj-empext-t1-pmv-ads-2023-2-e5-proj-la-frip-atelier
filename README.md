@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# Sistema de Controle de Vendas - La Frip Atelier
 
 `ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
@@ -6,7 +6,7 @@
 
 `Eixo 5`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto em desenvolvimento é um sistema de controle de vendas para o brechó intitulado La Frip Atelier. O sistema tem como objetivo auxiliar na gestão e organização das vendas realizadas na loja, permitindo o registro e acompanhamento das transações, controle de estoque e facilidade na identificação de peças vendidas. Com essa solução tecnológica, o La Frip Atelier busca otimizar processos internos e proporcionar uma experiência mais eficiente.
 
 ## Integrantes
 
