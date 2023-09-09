@@ -1,10 +1,6 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+As especificações do projeto foram elaboradas por meio de discussões entre os membros da equipe. Os pontos mais relevantes identificados durante essas discussões foram consolidados, fornecendo uma definição precisa do problema a ser abordado. Essas especificações serão a base para o desenvolvimento do projeto.
 
 ## Arquitetura e Tecnologias
 
@@ -29,8 +25,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-002| Disponibilizar ao usuário uma plataforma de cadastro de clientes parceiras   | ALTA |
 |RF-003| Disponibilizar ao usuário uma plataforma de cadastro de produtos consignados   | ALTA |
 |RF-004| Disponibilizar ao usuário uma plataforma de consulta para produtos consignados cadastrados atrelados a uma cliente parceira | ALTA |
-|RF-005| Disponibilizar ao usuário uma plataforma de consulta de vendas diárias e valores e verificar a porcentagem que deve ser repassada para a cliente parceira | ALTA |
-
+|RF-005| Disponibilizar ao usuário uma plataforma de consulta de vendas diárias e valores | ALTA |
+|RF-005| Permitir que o o usuário verifique a porcentagem do valor que deve ser repassado para a cliente parceira | ALTA |
 
 ### Requisitos não Funcionais
 
@@ -51,7 +47,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |01| O projeto deverá ser entregue até o final do semestre, em 06 de dezembro de 2023 |
 |02| Não poderá ocorrer contratação de terceiros para o desenvolvimento      |
 |03| Não é permitido a remuneração financeira para a equipe durante a execução deste trabalho acadêmico |
-
 
 ## Diagrama de Casos de Uso
 
