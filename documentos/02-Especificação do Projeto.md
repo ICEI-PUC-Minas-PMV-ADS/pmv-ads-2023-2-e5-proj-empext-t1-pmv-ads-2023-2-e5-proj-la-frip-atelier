@@ -25,17 +25,22 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| Disponibilizar um sistema de login e autenticação administrador, onde o usuário poderá criar uma conta com dados válidos e realizar login. | ALTA | 
+|RF-002| Disponibilizar ao usuário uma plataforma de cadastro de clientes parceiras   | ALTA |
+|RF-003| Disponibilizar ao usuário uma plataforma de cadastro de produtos consignados   | ALTA |
+|RF-004| Disponibilizar ao usuário uma plataforma de consulta para produtos consignados cadastrados atrelados a uma cliente parceira | ALTA |
+|RF-005| Disponibilizar ao usuário uma plataforma de consulta de vendas diárias e valores e verificar a porcentagem que deve ser repassada para a cliente parceira | ALTA |
+
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve possuir compatibilidade com os principais navegadores do mercado | ALTA |
-|RNF-002| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-003| A aplicação deve garantir uma experiência confortavél do usuário através da interface | ALTA |
-|RNF-004| Requisições do usuário devem ser preocessadas sem lentidão pelo sistema |  BAIXA | 
+|RNF-002| A aplicação deve garantir uma experiência confortavél do usuário através da interface | ALTA |
+|RNF-003| Requisições do usuário devem ser preocessadas sem lentidão pelo sistema |  BAIXA |
+|RNF-004| A aplicação deve ser intuitiva, de fácil utilização e entendimento, descartando a necessidade de treinamentos. |  MÉDIA | 
+|RNF-005| A aplicação deve possuir uma interface limpa, com visualização voltada apenas para as necessidades do usuário no momento, também como forma de melhorar a performance e o desempenho. | MÉDIA |
 
 ## Restrições
 
