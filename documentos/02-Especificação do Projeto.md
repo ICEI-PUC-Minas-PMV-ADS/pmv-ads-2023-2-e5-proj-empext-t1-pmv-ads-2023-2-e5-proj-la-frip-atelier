@@ -26,17 +26,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-003| Disponibilizar ao usuário uma plataforma de cadastro de produtos consignados   | ALTA |
 |RF-004| Disponibilizar ao usuário uma plataforma de consulta para produtos consignados cadastrados atrelados a uma cliente parceira | ALTA |
 |RF-005| Disponibilizar ao usuário uma plataforma de consulta de vendas diárias e valores | ALTA |
-|RF-005| Permitir que o o usuário verifique a porcentagem do valor que deve ser repassado para a cliente parceira | ALTA |
+|RF-006| Permitir que o o usuário verifique a porcentagem do valor que deve ser repassado para a cliente parceira | ALTA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve possuir compatibilidade com os principais navegadores do mercado | ALTA |
-|RNF-002| A aplicação deve garantir uma experiência confortavél do usuário através da interface | ALTA |
-|RNF-003| Requisições do usuário devem ser preocessadas sem lentidão pelo sistema |  BAIXA |
-|RNF-004| A aplicação deve ser intuitiva, de fácil utilização e entendimento, descartando a necessidade de treinamentos. |  MÉDIA | 
-|RNF-005| A aplicação deve possuir uma interface limpa, com visualização voltada apenas para as necessidades do usuário no momento, também como forma de melhorar a performance e o desempenho. | MÉDIA |
+|RNF-002| A aplicação deve ser intuitiva, de fácil utilização e entendimento, descartando a necessidade de treinamentos |  MÉDIA | 
+|RNF-003| A aplicação deve ter uma interface limpa e direcionada ao usuário, visando otimizar a performance e o processamento ágil das requisições | MÉDIA |
 
 ## Restrições
 
