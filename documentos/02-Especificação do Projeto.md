@@ -8,10 +8,9 @@ o	Descreva brevemente a arquitetura definida para o projeto e as tecnologias a s
 
 ## Project Model Canvas
 
-Colocar a imagem do modelo construído apresentando a proposta de solução.
+Modelo consolidado para apresentação da proposta da solução.
 
-> **Links Úteis**:
-> Disponíveis em material de apoio do projeto
+![Imagem do Project Model Canvas](img/03-project-model-canvas.png)
 
 ## Requisitos
 
@@ -62,9 +61,3 @@ O Modelo ER abaixo representa através de um diagrama como as entidades (coisas,
 ## Projeto da Base de Dados
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
-
-## Project Model Canvas
-
-Modelo consolidado para apresentação da proposta da solução.
-
-![Imagem do Project Model Canvas](img/03-project-model-canvas.png)
