@@ -55,7 +55,7 @@ O diagrama apresentado abaixo descreve de forma clara e visual as interações e
 
 O Modelo ER abaixo representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
-![Imagem do Esquema Relacional](img/03-esquema-relacional.png)
+![Imagem do Esquema Relacional](img/03-esquema-relacional.jpeg)
 
 
 ## Projeto da Base de Dados
