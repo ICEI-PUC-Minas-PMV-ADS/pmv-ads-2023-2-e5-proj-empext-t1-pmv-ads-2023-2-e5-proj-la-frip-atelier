@@ -4,7 +4,18 @@ As especificações do projeto foram elaboradas por meio de discussões entre os
 
 ## Arquitetura e Tecnologias
 
-o	Descreva brevemente a arquitetura definida para o projeto e as tecnologias a serem utilizadas. Sugere-se a criação de um diagrama de componentes da solução.
+A arquitetura e tecnologias usadas no projeto são elaboradas a partir de diversas plataformas e a relação dos ambientes com seu propósito a respeito é apresentada conforme a tabela:
+
+Ambiente|Plataforma|Link de Acesso
+|:--------|:----------:|:-------------:|
+|Repositório de código fonte|GitHub| []|
+|Editor de código|Visual Studio Code|[]|
+|Hospedagem||[]|
+|Linguagens||[]|
+|Documentos do Projeto|GitHub (docs/)|[]|
+|Criação de Diagramas| Figma, Lucidchart |[]|
+|Projeto de Interface e Wireframes| Figma |[]|
+|Gerenciamento do Projeto| Kanban do GitHub |[]|
 
 ## Project Model Canvas
 
