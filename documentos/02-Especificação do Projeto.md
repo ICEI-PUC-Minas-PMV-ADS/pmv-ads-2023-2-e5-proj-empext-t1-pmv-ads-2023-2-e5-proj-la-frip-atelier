@@ -4,24 +4,29 @@ As especificações do projeto foram elaboradas por meio de discussões entre os
 
 ## Arquitetura e Tecnologias
 
-A arquitetura e tecnologias usadas no projeto são elaboradas a partir de diversas plataformas e a relação dos ambientes com seu propósito a respeito é apresentada conforme a tabela:
+A representação da arquitetura da aplicação pode ser observada abaixo.
 
-Ambiente|Plataforma|Link de Acesso
-|:--------|:----------:|:-------------:|
-|Repositório de código fonte|GitHub| []|
-|Editor de código|Visual Studio Code|[]|
-|Hospedagem||[]|
-|Linguagens||[]|
-|Documentos do Projeto|GitHub (docs/)|[]|
-|Criação de Diagramas| Figma, Lucidchart |[]|
-|Projeto de Interface e Wireframes| Figma |[]|
-|Gerenciamento do Projeto| Kanban do GitHub |[]|
+![Imagem do Project Model Canvas](img/02-Arquitetura.png)
+
+A relação dos ambientes com seu propósito é apresentada conforme a tabela:
+
+| Plataforma | Função | Link de Acesso |
+|--------|--------|--------|
+| GitHub | Repositório de código-fonte e documentação do projeto | [Acesse](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-proj-la-frip-atelier) |
+| Visual Studio Code | Editor de código | [Acesse](https://code.visualstudio.com/) |
+| Lucidchart | Criação de diagramas | [Acesse](https://www.lucidchart.com/pages/pt) |
+| Figma | Projeto de Interface e Wireframes | [Acesse](https://www.figma.com/) |
+| Projects by GitHub | Planejamento e acompanhamento do projeto em quadro Kanban | [Acesse](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-proj-la-frip-atelier/projects) |
+| * | Hospedagem da Web API | [Acesse]() |
+| * | Hospedagem do Banco de Dados | [Acesse]() |
+| * | Hospedagem do Front-end da aplicação | [Acesse]() |
+
 
 ## Project Model Canvas
 
 Modelo consolidado para apresentação da proposta da solução.
 
-![Imagem do Project Model Canvas](img/03-project-model-canvas.png)
+![Imagem do Project Model Canvas](img/02-project-model-canvas.png)
 
 ## Requisitos
 
@@ -66,7 +71,7 @@ O diagrama apresentado abaixo descreve de forma clara e visual as interações e
 
 O Modelo ER abaixo representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
-![Imagem do Esquema Relacional](img/03-esquema-relacional.jpeg)
+![Imagem do Esquema Relacional](img/02-esquema-relacional.jpeg)
 
 
 ## Projeto da Base de Dados
