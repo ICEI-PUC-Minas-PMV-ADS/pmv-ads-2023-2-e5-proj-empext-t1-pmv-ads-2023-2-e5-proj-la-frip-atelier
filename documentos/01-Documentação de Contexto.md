@@ -21,7 +21,7 @@ A aplicação dedicada para o brechó proporciona uma ferramenta de aprendizado 
 
 A implantação da aplicação La Frip Atelier é alinhada aos princípios da extensão universitária, aplicando conhecimento acadêmico em benefício social. Os principais benefícios incluem:
 
-- *Para Gestores da La Frip Atelier:* A aplicação melhora a gestão de inventário, vendas e controle de peças consignadas permitindo uma operação mais suave e eficaz do negócio, contribuindo para seu sucesso a longo prazo.
+- *Para Gestores da La Frip Atelier:* A aplicação melhora a gestão de inventário, vendas e controle de peças consignadas permitindo uma operação mais eficiente do negócio, contribuindo para seu sucesso a longo prazo.
 
 - *Para a Equipe do Projeto/Alunos Desenvolvedores:* A equipe tem a oportunidade de aplicar seus conhecimentos acadêmicos na prática, enriquecendo sua experiência educacional e preparando-os para desafios no mercado de trabalho.
 
