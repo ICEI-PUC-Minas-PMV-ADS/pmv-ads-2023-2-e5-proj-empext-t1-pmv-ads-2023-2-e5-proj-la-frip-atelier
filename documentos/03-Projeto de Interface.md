@@ -1,6 +1,10 @@
 
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
+## Diagrama de Fluxo
 
-Visão geral da interação do usuário com as funcionalidades que fazem parte do sistema sociotécnico (protótipo de telas).
+O diagrama abaixo apresenta o fluxo de interação do usuário com o aplicativo. As telas deste fluxo serão descritas melhor na [seção de wireframes logo abaixo](#wireframes).
+
+![Imagem do Diagrama de Fluxo](img/03-fluxograma.png)
+
+## Wireframes
