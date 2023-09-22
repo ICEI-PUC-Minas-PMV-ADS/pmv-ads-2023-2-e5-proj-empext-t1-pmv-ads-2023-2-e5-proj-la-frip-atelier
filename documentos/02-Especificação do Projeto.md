@@ -26,7 +26,7 @@ A relação dos ambientes com seu propósito é apresentada conforme a tabela:
 
 Modelo consolidado para apresentação da proposta da solução.
 
-![Imagem do Project Model Canvas](img/02-project-model-canvas.png)
+![Imagem do Project Model Canvas](img/03-project-model-canvas1.png)
 
 ## Requisitos
 
