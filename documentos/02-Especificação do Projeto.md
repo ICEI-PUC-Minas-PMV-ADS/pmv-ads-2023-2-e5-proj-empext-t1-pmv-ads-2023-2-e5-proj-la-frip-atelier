@@ -17,16 +17,14 @@ A relação dos ambientes com seu propósito é apresentada conforme a tabela:
 | Lucidchart | Criação de diagramas | [Acesse](https://www.lucidchart.com/pages/pt) |
 | Figma | Projeto de Interface e Wireframes | [Acesse](https://www.figma.com/) |
 | Projects by GitHub | Planejamento e acompanhamento do projeto em quadro Kanban | [Acesse](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-proj-la-frip-atelier/projects) |
-| * | Hospedagem da Web API | [Acesse]() |
+| * | Hospedagem da aplicação Web | [Acesse]() |
 | * | Hospedagem do Banco de Dados | [Acesse]() |
-| * | Hospedagem do Front-end da aplicação | [Acesse]() |
-
 
 ## Project Model Canvas
 
 Modelo consolidado para apresentação da proposta da solução.
 
-![Imagem do Project Model Canvas](img/03-project-model-canvas1.png)
+![Imagem do Project Model Canvas](img/02-project-model-canvas1.png)
 
 ## Requisitos
 
@@ -36,7 +34,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Disponibilizar um sistema de login e autenticação administrador, onde o usuário poderá criar uma conta com dados válidos e realizar login. | ALTA | 
+|RF-001| Disponibilizar um sistema de login e autenticação administrador, onde o usuário poderá criar uma conta com dados válidos e realizar login. | ALTA |
 |RF-002| Disponibilizar ao usuário uma plataforma de cadastro de clientes parceiras   | ALTA |
 |RF-003| Disponibilizar ao usuário uma plataforma de cadastro de produtos consignados   | ALTA |
 |RF-004| Disponibilizar ao usuário uma plataforma de consulta para produtos consignados cadastrados atrelados a uma cliente parceira | ALTA |
@@ -48,7 +46,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve possuir compatibilidade com os principais navegadores do mercado | ALTA |
-|RNF-002| A aplicação deve ser intuitiva, de fácil utilização e entendimento, descartando a necessidade de treinamentos |  MÉDIA | 
+|RNF-002| A aplicação deve ser intuitiva, de fácil utilização e entendimento, descartando a necessidade de treinamentos |  MÉDIA |
 |RNF-003| A aplicação deve ter uma interface limpa e direcionada ao usuário, visando otimizar a performance e o processamento ágil das requisições | MÉDIA |
 
 ## Restrições
@@ -72,7 +70,6 @@ O diagrama apresentado abaixo descreve de forma clara e visual as interações e
 O Modelo ER abaixo representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
 ![Imagem do Esquema Relacional](img/02-esquema-relacional.jpeg)
-
 
 ## Projeto da Base de Dados
 
