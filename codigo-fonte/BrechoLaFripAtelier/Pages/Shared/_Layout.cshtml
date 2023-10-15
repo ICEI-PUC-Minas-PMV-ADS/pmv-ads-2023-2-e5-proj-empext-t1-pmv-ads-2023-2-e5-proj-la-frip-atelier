@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - La Frip Atelier</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BrechoLaFripAtelier.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <!-- Sidebar -->
+            <nav class="col-md-2 bg-dark min-vh-100">
+                <div class="p-2">
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-page="../Index">Início</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-white" asp-page="/Orders/Index">Vendas</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-white" asp-page="/Products/Index">Produtos</a>
+                        </li>
+                        <li>
+                            <a class="nav-link text-white" asp-page="/Partners/Index">Parceiras</a>
+                        </li>
+                    </ul>
+
+                    <hr>
+
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <strong>Usuário</strong>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Content -->
+            <div class="col-md-10">
+                <div class="container">
+                    <main role="main" class="pb-3">
+                        @RenderBody()
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

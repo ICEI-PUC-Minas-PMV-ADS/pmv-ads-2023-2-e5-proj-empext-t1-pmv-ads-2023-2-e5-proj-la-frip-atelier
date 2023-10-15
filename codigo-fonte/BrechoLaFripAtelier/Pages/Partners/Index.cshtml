@@ -1,0 +1,54 @@
+﻿@page
+@model BrechoLaFripAtelier.Pages.Partners.IndexModel
+
+@{
+    ViewData["Title"] = "Parceiras";
+}
+
+<h1>Parceiras</h1>
+
+<p>
+    <a asp-page="Create">Cadastrar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Partner[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Partner[0].Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Partner[0].CPFnumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Partner[0].Commission)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Partner) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPFnumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Commission)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Ver</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

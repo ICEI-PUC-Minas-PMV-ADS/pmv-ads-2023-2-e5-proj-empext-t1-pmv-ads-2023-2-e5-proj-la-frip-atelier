@@ -1,18 +1,27 @@
-﻿{
+{
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:49775",
-      "sslPort": 44364
+      "applicationUrl": "http://localhost:22067",
+      "sslPort": 44314
     }
   },
   "profiles": {
-    "BrechoLaFripAtelier": {
+    "http": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7281;http://localhost:5099",
+      "applicationUrl": "http://localhost:5011",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:7056;http://localhost:5011",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
