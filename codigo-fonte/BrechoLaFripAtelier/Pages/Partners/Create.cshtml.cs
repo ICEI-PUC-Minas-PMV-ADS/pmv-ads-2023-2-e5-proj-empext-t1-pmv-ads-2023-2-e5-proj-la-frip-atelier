@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BrechoLaFripAtelier.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using BrechoLaFripAtelier.Models;
 
 namespace BrechoLaFripAtelier.Pages.Partners
 {
     public class CreateModel : PageModel
     {
-        private readonly BrechoLaFripAtelier.Models.MyDbContext _context;
+        private readonly MyDbContext _context;
 
-        public CreateModel(BrechoLaFripAtelier.Models.MyDbContext context)
+        public CreateModel(MyDbContext context)
         {
             _context = context;
         }
@@ -25,12 +20,12 @@ namespace BrechoLaFripAtelier.Pages.Partners
 
         [BindProperty]
         public Partner Partner { get; set; } = default!;
-        
+
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid || _context.Partners == null || Partner == null)
+            if (!ModelState.IsValid || _context.Partners == null || Partner == null)
             {
                 return Page();
             }

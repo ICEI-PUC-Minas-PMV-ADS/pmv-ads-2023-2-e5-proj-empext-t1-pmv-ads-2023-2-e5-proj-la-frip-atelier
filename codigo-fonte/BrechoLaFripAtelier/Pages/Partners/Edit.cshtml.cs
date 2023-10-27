@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BrechoLaFripAtelier.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BrechoLaFripAtelier.Models;
 
 namespace BrechoLaFripAtelier.Pages.Partners
 {
     public class EditModel : PageModel
     {
-        private readonly BrechoLaFripAtelier.Models.MyDbContext _context;
+        private readonly MyDbContext _context;
 
-        public EditModel(BrechoLaFripAtelier.Models.MyDbContext context)
+        public EditModel(MyDbContext context)
         {
             _context = context;
         }
@@ -29,7 +24,7 @@ namespace BrechoLaFripAtelier.Pages.Partners
                 return NotFound();
             }
 
-            var partner =  await _context.Partners.FirstOrDefaultAsync(m => m.Id == id);
+            var partner = await _context.Partners.FirstOrDefaultAsync(m => m.Id == id);
             if (partner == null)
             {
                 return NotFound();
@@ -70,7 +65,7 @@ namespace BrechoLaFripAtelier.Pages.Partners
 
         private bool PartnerExists(int id)
         {
-          return (_context.Partners?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Partners?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

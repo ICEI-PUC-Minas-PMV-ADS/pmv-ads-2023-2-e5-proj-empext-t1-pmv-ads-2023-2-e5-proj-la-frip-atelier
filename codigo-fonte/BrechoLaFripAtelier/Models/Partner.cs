@@ -25,7 +25,7 @@ namespace BrechoLaFripAtelier.Models
             ErrorMessage = "Insira no formato: xxx.xxx.xxx-xx")]
         public string CPFnumber { get; set; } = string.Empty;
 
-        [Display(Name = "Comissão em %")]
+        [Display(Name = "Comissão")]
         [Required(ErrorMessage = "Informe o percentual da comissão")]
         public int Commission { get; set; }
 
