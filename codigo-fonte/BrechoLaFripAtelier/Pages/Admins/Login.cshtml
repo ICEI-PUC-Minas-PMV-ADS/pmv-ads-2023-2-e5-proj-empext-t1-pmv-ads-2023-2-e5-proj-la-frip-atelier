@@ -1,0 +1,43 @@
+﻿@page
+@model BrechoLaFripAtelier.Pages.Admins.LoginModel
+
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<h1></h1>
+
+<h4>Cadastro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Admin.Username" class="control-label"></label>
+                <input asp-for="Admin.Username" class="form-control" />
+                <span asp-validation-for="Admin.Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admin.Password" class="control-label"></label>
+                <input asp-for="Admin.Password" class="form-control" />
+                <span asp-validation-for="Admin.Password" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <div class="form-group mt-3">
+                    <input type="submit" value="Confirmar" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Message"]</div>
+        }
+        <br />
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

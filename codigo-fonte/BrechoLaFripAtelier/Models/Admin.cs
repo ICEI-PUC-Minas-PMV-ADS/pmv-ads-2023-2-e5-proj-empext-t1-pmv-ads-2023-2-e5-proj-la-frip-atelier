@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace BrechoLaFripAtelier.Models
 {
@@ -16,6 +17,10 @@ namespace BrechoLaFripAtelier.Models
         [MinLength(8, ErrorMessage = "A senha deve ter mais que 8 caracteres")]
         [DataType(DataType.Password)]
         public string Password { get; set; } = string.Empty;
+
+        [DisplayName("Nome")]
+        [Required(ErrorMessage = "Informe o seu nome")]
+        public string Name { get; set; } = string.Empty;
 
         [Display(Name = "Pergunta de Segurança")]
         [Required(ErrorMessage = "Informe a pergunta de segurança")]

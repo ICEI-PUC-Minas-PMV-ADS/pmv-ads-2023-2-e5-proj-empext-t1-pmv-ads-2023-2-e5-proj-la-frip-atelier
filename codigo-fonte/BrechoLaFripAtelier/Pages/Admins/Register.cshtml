@@ -1,0 +1,53 @@
+﻿@page
+@model BrechoLaFripAtelier.Pages.Admins.CreateModel
+
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<h1></h1>
+
+<h4>Cadastro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Admin.Username" class="control-label"></label>
+                <input asp-for="Admin.Username" class="form-control" />
+                <span asp-validation-for="Admin.Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admin.Password" class="control-label"></label>
+                <input asp-for="Admin.Password" class="form-control" />
+                <span asp-validation-for="Admin.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admin.Name" class="control-label"></label>
+                <input asp-for="Admin.Name" class="form-control" />
+                <span asp-validation-for="Admin.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admin.SecurityQuestion" class="control-label"></label>
+                <input asp-for="Admin.SecurityQuestion" class="form-control" />
+                <span asp-validation-for="Admin.SecurityQuestion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Admin.SecurityResponse" class="control-label"></label>
+                <input asp-for="Admin.SecurityResponse" class="form-control" />
+                <span asp-validation-for="Admin.SecurityResponse" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <div class="form-group mt-3">
+                    <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
