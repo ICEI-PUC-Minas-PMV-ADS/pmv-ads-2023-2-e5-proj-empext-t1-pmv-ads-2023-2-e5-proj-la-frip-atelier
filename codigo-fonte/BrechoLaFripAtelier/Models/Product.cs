@@ -20,8 +20,6 @@ namespace BrechoLaFripAtelier.Models
         [Required(ErrorMessage = "Informe o preço do produto")]
         public int Price { get; set; }
 
-        public DateTime DateOfSale { get; set; }
-
         [Display(Name = "Parceira")]
         public int PartnerId { get; set; }
 
