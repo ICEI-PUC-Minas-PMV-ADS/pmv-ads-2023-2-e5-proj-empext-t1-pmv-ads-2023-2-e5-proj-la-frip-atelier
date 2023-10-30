@@ -27,7 +27,8 @@ namespace BrechoLaFripAtelier.Models
 
         [Display(Name = "Comissão")]
         [Required(ErrorMessage = "Informe o percentual da comissão")]
-        public int Commission { get; set; }
+        [Range(0, 100, ErrorMessage = "Percentual inválido")]
+        public decimal Commission { get; set; }
 
         public List<Product> Products { get; set; } = new();
     }

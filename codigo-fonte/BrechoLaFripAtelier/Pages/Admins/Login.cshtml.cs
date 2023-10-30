@@ -20,29 +20,41 @@ namespace BrechoLaFripAtelier.Pages.Admins
         {
             return Page();
         }
-        
+
         [BindProperty]
         public Admin Admin { get; set; } = default!;
 
         public async Task<IActionResult> OnPostAsync()
         {
-            var adminLogin = await _context.Admins.FirstOrDefaultAsync(m => m.Username == Admin.Username);
-
-            if (adminLogin == null)
+            if (Admin.Username == "Admin" && Admin.Password == "12345678")
             {
-                TempData["Message"] = "Informe o usuário e a senha";
+                if (!_context.Admins.Any())
+                {
+                    return RedirectToPage("./Register");
+                }
+                else
+                {
+                    TempData["Message"] = "Usuário e/ou senha inválidos";
+                }
+            }
+
+            var matchedAdmin = await _context.Admins.FirstOrDefaultAsync(m => m.Username == Admin.Username);
+
+            if (matchedAdmin == null)
+            {
+                TempData["Message"] = "Usuário e/ou senha inválidos";
             }
             else
             {
-                bool passwordOk = BCrypt.Net.BCrypt.Verify(Admin.Password, adminLogin.Password);
+                bool passwordOk = BCrypt.Net.BCrypt.Verify(Admin.Password, matchedAdmin.Password);
 
                 if (passwordOk)
                 {
                     var claims = new List<Claim>
                     {
-                        new Claim(ClaimTypes.Name, adminLogin.Name),
-                        new Claim(ClaimTypes.NameIdentifier, adminLogin.Id.ToString()),
-                        new Claim("Username", adminLogin.Username)
+                        new Claim(ClaimTypes.Name, matchedAdmin.Name),
+                        new Claim(ClaimTypes.NameIdentifier, matchedAdmin.Id.ToString()),
+                        new Claim("Username", matchedAdmin.Username)
                     };
 
                     var userIdentity = new ClaimsIdentity(claims, "login");
@@ -58,7 +70,7 @@ namespace BrechoLaFripAtelier.Pages.Admins
 
                     await HttpContext.SignInAsync(principal, props);
 
-                    return Redirect("/");
+                    return RedirectToPage("../Index");
                 }
                 else
                 {

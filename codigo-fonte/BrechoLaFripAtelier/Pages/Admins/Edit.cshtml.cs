@@ -59,7 +59,7 @@ namespace BrechoLaFripAtelier.Pages.Admins
                 }
             }
 
-            return RedirectToPage("../Index");
+            return RedirectToPage("./Profile");
         }
 
         private bool AdminExists(int id)

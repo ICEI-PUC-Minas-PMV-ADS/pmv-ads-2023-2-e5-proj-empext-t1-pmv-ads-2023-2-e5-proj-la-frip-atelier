@@ -5,7 +5,15 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages(options =>
+{
+    options.Conventions.AuthorizeFolder("/Products");
+    options.Conventions.AuthorizeFolder("/Partners");
+    options.Conventions.AuthorizePage("/Admins/Edit");
+    options.Conventions.AuthorizePage("/Admins/Profile");
+    options.Conventions.AuthorizePage("/Admins/Logout");
+    options.Conventions.AuthorizePage("/Index");
+});
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ??
     throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
@@ -22,8 +30,9 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
-        options.AccessDeniedPath = "/AccessDenied/";
+        options.AccessDeniedPath = "/Admins/AccessDenied/";
         options.LoginPath = "/Admins/Login/";
+        options.LogoutPath = "/Admins/Logout";
     });
 
 var app = builder.Build();

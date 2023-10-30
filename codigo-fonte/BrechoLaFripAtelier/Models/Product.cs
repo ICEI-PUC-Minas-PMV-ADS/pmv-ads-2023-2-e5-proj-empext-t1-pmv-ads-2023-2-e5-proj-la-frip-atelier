@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BrechoLaFripAtelier.Models
 {
@@ -18,14 +19,17 @@ namespace BrechoLaFripAtelier.Models
 
         [Display(Name = "Preço")]
         [Required(ErrorMessage = "Informe o preço do produto")]
-        public int Price { get; set; }
+        [Column(TypeName = "decimal(12, 2)")]
+        [DataType(DataType.Currency)]
+        public decimal Price { get; set; }
 
         [Display(Name = "Parceira")]
         public int PartnerId { get; set; }
 
+        [Display(Name = "Parceira")]
         public Partner? Partner { get; set; }
 
-        [Display(Name = "Status")]
+        [Display(Name = "Status do Produto")]
         [Required(ErrorMessage = "Informe o status do produto")]
         public ProductStatus Status { get; set; }
     }

@@ -32,7 +32,7 @@ namespace BrechoLaFripAtelier.Pages.Admins
             _context.Admins.Add(Admin);
             await _context.SaveChangesAsync();
 
-            return Redirect("/");
+            return RedirectToPage("./Login");
         }
     }
 }
