@@ -31,10 +31,17 @@ namespace BrechoLaFripAtelier.Pages.Products
                 products = products.Where(p => p.Name.Contains(search));
             }
 
-            // Carregue os resultados filtrados na propriedade Partner
-            if (_context.Partners != null)
+            // Carregue os resultados filtrados na propriedade Products
+            if (_context.Products != null)
             {
                 Product = await products.ToListAsync();
+
+            }
+
+            if (_context.Products != null)
+            {
+                Product = await _context.Products
+                .Include(p => p.Partner).ToListAsync();
             }
         }
     }
