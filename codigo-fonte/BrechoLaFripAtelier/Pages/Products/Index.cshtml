@@ -5,12 +5,24 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="mb-3 mt-5 display-4">Produtos</h1>
 
-<p>
-    <a asp-page="Create">Cadastrar Produto</a>
-</p>
-<table class="table">
+<div class="d-flex justify-content-between">
+    <form method="get">
+        <div class="input-group mb-3 mt-3">
+            <input type="text" name="search" class="form-control" placeholder="Buscar...">
+            <button class="btn btn-outline-secondary" type="submit">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
+    </form>
+
+    <div class="mb-3 mt-3">
+        <a asp-page="Create" class="btn btn-primary">Cadastrar Produto</a>
+    </div>
+</div>
+
+<table class="table table-striped table-hover">
     <thead>
         <tr>
             <th>
@@ -32,29 +44,36 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Product) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Size)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Partner.CPFnumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Product)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Size)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Partner.CPFnumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-secondary">
+                        <i class="bi bi-pencil-square"></i>
+                    </a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-secondary">
+                        <i class="bi bi-info-square"></i>
+                    </a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger">
+                        <i class="bi bi-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
