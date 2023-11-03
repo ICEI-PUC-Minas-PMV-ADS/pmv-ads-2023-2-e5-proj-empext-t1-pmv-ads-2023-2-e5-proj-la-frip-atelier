@@ -5,8 +5,6 @@
     ViewData["Title"] = "Login";
 }
 
-<h1></h1>
-
 <h4>Login</h4>
 <hr />
 <div class="row">
@@ -24,16 +22,23 @@
                 <span asp-validation-for="Admin.Password" class="text-danger"></span>
             </div>
 
+            @if (Model.AdminsExist)
+            {
+                <a asp-page="/Recovery">Recuperar acesso</a>
+            }
+
             <div class="d-flex justify-content-between">
                 <div class="form-group mt-3">
-                    <input type="submit" value="Confirmar" class="btn btn-primary" />
+                    <input type="submit" value="Entrar" class="btn btn-primary" />
                 </div>
             </div>
         </form>
+
         @if (TempData["Message"] != null)
         {
             <div class="alert alert-danger mt-3">@TempData["Message"]</div>
         }
+
         <br />
     </div>
 </div>

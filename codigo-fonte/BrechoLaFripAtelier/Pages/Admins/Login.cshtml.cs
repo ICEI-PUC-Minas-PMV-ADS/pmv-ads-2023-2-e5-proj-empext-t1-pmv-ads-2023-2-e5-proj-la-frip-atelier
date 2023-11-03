@@ -11,6 +11,8 @@ namespace BrechoLaFripAtelier.Pages.Admins
     {
         private readonly MyDbContext _context;
 
+        public bool AdminsExist { get; set; }
+
         public LoginModel(MyDbContext context)
         {
             _context = context;
@@ -18,6 +20,7 @@ namespace BrechoLaFripAtelier.Pages.Admins
 
         public IActionResult OnGet()
         {
+            AdminsExist = _context.Admins.Any();
             return Page();
         }
 

@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BrechoLaFripAtelier.Pages.Admins
 {
-    public class CreateModel : PageModel
+    public class RegisterModel : PageModel
     {
         private readonly MyDbContext _context;
 
-        public CreateModel(MyDbContext context)
+        public RegisterModel(MyDbContext context)
         {
             _context = context;
         }

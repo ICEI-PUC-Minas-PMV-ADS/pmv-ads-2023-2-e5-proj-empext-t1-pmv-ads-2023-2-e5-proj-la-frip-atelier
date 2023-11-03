@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -16,7 +17,7 @@
                 <div class="p-2">
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" asp-page="../Index">Início</a>
+                            <a class="nav-link text-white" asp-page="../Index">Início</a>
                         </li>
                         <li>
                             <a class="nav-link text-white" asp-page="/Orders/Index">Vendas</a>
@@ -33,11 +34,18 @@
 
                     <div class="dropdown">
                         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            <strong>Usuário</strong>
+                            @if (User.Identity != null && User.Identity.IsAuthenticated)
+                            {
+                                <strong>@User.Identity.Name</strong>
+                            }
+                            else
+                            {
+                                <strong>Usuário</strong>
+                            }
                         </a>
 
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" asp-page="/Admins/Profile" asp-route-id="@User.FindFirstValue(ClaimTypes.NameIdentifier)">Perfil</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" asp-page="/Admins/Logout">Sair</a></li>
                         </ul>

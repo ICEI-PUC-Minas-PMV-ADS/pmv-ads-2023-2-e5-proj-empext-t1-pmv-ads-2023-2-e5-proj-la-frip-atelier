@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BrechoLaFripAtelier.Pages.Admins
 {
-    public class DetailsModel : PageModel
+    public class ProfileModel : PageModel
     {
         private readonly MyDbContext _context;
 
-        public DetailsModel(MyDbContext context)
+        public ProfileModel(MyDbContext context)
         {
             _context = context;
         }

@@ -9,7 +9,7 @@ namespace BrechoLaFripAtelier.Models
         public int Id { get; set; }
 
         [Display(Name = "Usuário")]
-        [Required(ErrorMessage = "Informe o username")]
+        [Required(ErrorMessage = "Informe o usuário")]
         public string Username { get; set; } = string.Empty;
 
         [Display(Name = "Senha")]
