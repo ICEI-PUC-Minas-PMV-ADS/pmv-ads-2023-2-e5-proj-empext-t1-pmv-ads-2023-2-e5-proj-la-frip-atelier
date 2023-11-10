@@ -11,8 +11,6 @@ O projeto em desenvolvimento é um sistema de controle de vendas para o brechó 
 ## Integrantes
 
 * Álvaro Alfaya Fonseca
-* Daniel Begas da Silva
-* Denio Gonçalves de Lima
 * Hestefani Romão Durães
 * Mychel Costa da Silva
 * Talles Monteiro Góis
@@ -28,17 +26,17 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 # Documentação
 
 <ol>
-<li><a href="docs/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
-<li><a href="docs/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
-<li><a href="docs/03-Projeto de Interface.md"> Projeto de Interface</a></li>
-<li><a href="docs/04-Testes de Software.md"> Testes de Software</a></li>
-<li><a href="docs/05-Implantação.md"> Implantação</a></li>
+<li><a href="documentos/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
+<li><a href="documentos/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
+<li><a href="documentos/03-Projeto de Interface.md"> Projeto de Interface</a></li>
+<li><a href="documentos/04-Testes de Software.md"> Testes de Software</a></li>
+<li><a href="documentos/05-Implantação.md"> Implantação</a></li>
 </ol>
 
 # Código
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+<li><a href="codigo-fonte/README.md"> Código Fonte</a></li>
 
 # Apresentação
 
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
+<li><a href="apresentacao/README.md"> Apresentação da solução</a></li>

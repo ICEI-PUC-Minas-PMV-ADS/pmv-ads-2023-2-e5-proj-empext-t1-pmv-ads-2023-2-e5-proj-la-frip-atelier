@@ -35,11 +35,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001| Disponibilizar um sistema de login e autenticação administrador, onde o usuário poderá criar uma conta com dados válidos e realizar login. | ALTA |
-|RF-002| Disponibilizar ao usuário uma plataforma de cadastro de clientes parceiras   | ALTA |
-|RF-003| Disponibilizar ao usuário uma plataforma de cadastro de produtos consignados   | ALTA |
-|RF-004| Disponibilizar ao usuário uma plataforma de consulta para produtos consignados cadastrados atrelados a uma cliente parceira | ALTA |
-|RF-005| Disponibilizar ao usuário uma plataforma de consulta de vendas diárias e valores | ALTA |
-|RF-006| Permitir que o o usuário verifique a porcentagem do valor que deve ser repassado para a cliente parceira | ALTA |
+|RF-002| Disponibilizar um sistema de recuperação de senha. | ALTA |
+|RF-003| Disponibilizar ao usuário uma plataforma de cadastro de parceiras   | ALTA |
+|RF-004| Disponibilizar ao usuário uma plataforma de cadastro de produtos consignados   | ALTA |
+|RF-005| Disponibilizar ao usuário uma plataforma de consulta para produtos consignados ou não | ALTA |
+|RF-006| Disponibilizar ao usuário uma plataforma de consulta para produtos cadastrados atrelados a uma parceira | ALTA |
+|RF-007| Disponibilizar ao usuário uma plataforma de consulta de vendas diárias e valores | ALTA |
+|RF-008| Permitir que o o usuário verifique a porcentagem do valor que deve ser repassado para a cliente parceira | ALTA |
 
 ### Requisitos não Funcionais
 
