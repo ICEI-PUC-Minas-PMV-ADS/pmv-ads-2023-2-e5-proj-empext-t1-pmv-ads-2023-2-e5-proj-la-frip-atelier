@@ -1,24 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using BrechoLaFripAtelier.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using BrechoLaFripAtelier.Models;
 
 namespace BrechoLaFripAtelier.Pages.Products
 {
     public class IndexModel : PageModel
     {
-        private readonly BrechoLaFripAtelier.Models.MyDbContext _context;
+        private readonly MyDbContext _context;
 
-        public IndexModel(BrechoLaFripAtelier.Models.MyDbContext context)
+        public IndexModel(MyDbContext context)
         {
             _context = context;
         }
 
-        public IList<Product> Product { get;set; } = default!;
+        public IList<Product> Product { get; set; } = default!;
 
         public async Task OnGetAsync(string search)
         {
@@ -34,14 +29,9 @@ namespace BrechoLaFripAtelier.Pages.Products
             // Carregue os resultados filtrados na propriedade Products
             if (_context.Products != null)
             {
-                Product = await products.ToListAsync();
-
-            }
-
-            if (_context.Products != null)
-            {
-                Product = await _context.Products
-                .Include(p => p.Partner).ToListAsync();
+                Product = await products
+                .Include(p => p.Partner)
+                .ToListAsync();
             }
         }
     }

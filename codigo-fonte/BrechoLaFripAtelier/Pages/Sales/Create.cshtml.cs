@@ -1,8 +1,9 @@
 ﻿using BrechoLaFripAtelier.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace BrechoLaFripAtelier.Pages.Partners
+namespace BrechoLaFripAtelier.Pages.Sales
 {
     public class CreateModel : PageModel
     {
@@ -15,21 +16,23 @@ namespace BrechoLaFripAtelier.Pages.Partners
 
         public IActionResult OnGet()
         {
+            ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name");
             return Page();
         }
 
         [BindProperty]
-        public Partner Partner { get; set; } = default!;
+        public Sale Sale { get; set; } = default!;
 
 
+        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid || _context.Partners == null || Partner == null)
+            if (!ModelState.IsValid || _context.Sales == null || Sale == null)
             {
                 return Page();
             }
 
-            _context.Partners.Add(Partner);
+            _context.Sales.Add(Sale);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

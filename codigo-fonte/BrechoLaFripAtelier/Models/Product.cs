@@ -32,6 +32,8 @@ namespace BrechoLaFripAtelier.Models
         [Display(Name = "Status do Produto")]
         [Required(ErrorMessage = "Informe o status do produto")]
         public ProductStatus Status { get; set; }
+
+        public List<Sale> Sales { get; set; } = new();
     }
 
     public enum ProductStatus

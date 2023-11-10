@@ -18,7 +18,7 @@
     </form>
 
     <div class="mb-3 mt-3">
-        <a asp-page="Create" class="btn btn-primary">Cadastrar Produto</a>
+        <a asp-page="Create" class="btn btn-primary">Cadastrar</a>
     </div>
 </div>
 
@@ -65,9 +65,6 @@
                 <td>
                     <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-secondary">
                         <i class="bi bi-pencil-square"></i>
-                    </a> |
-                    <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-secondary">
-                        <i class="bi bi-info-square"></i>
                     </a> |
                     <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger">
                         <i class="bi bi-trash"></i>

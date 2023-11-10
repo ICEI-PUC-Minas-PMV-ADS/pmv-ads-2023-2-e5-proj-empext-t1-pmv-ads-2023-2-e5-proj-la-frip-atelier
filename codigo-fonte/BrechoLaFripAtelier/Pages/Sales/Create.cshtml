@@ -1,0 +1,44 @@
+﻿@page
+@using BrechoLaFripAtelier.Models;
+@model BrechoLaFripAtelier.Pages.Sales.CreateModel
+
+@{
+    ViewData["Title"] = "Registrar Venda";
+}
+
+<h1>Vendas</h1>
+
+<h4>Registrar Venda</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Sale.ProductId" class="control-label"></label>
+                <select asp-for="Sale.ProductId" class ="form-control" asp-items="ViewBag.ProductId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sale.DateOfSale" class="control-label"></label>
+                <input asp-for="Sale.DateOfSale" class="form-control" />
+                <span asp-validation-for="Sale.DateOfSale" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sale.Status" class="control-label"></label>
+                <select asp-for="Sale.Status" class="form-control" asp-items="Html.GetEnumSelectList<CommissionStatus>()"></select>
+                <span asp-validation-for="Sale.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
