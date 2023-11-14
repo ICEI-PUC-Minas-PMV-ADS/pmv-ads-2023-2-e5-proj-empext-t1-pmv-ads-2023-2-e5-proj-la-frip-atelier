@@ -1,22 +1,28 @@
 ﻿using BrechoLaFripAtelier.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BrechoLaFripAtelier.Pages.Sales
 {
-    public class CreateModel : PageModel
+    public class RegisterModel : PageModel
     {
         private readonly MyDbContext _context;
 
-        public CreateModel(MyDbContext context)
+        public RegisterModel(MyDbContext context)
         {
             _context = context;
         }
 
-        public IActionResult OnGet()
+        public IActionResult OnGet(int? productId)
         {
-            ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Name");
+
+            if (productId == null)
+            {
+                return NotFound();
+            }
+
+            ViewData["ProductId"] = productId;
+
             return Page();
         }
 
@@ -24,7 +30,6 @@ namespace BrechoLaFripAtelier.Pages.Sales
         public Sale Sale { get; set; } = default!;
 
 
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid || _context.Sales == null || Sale == null)

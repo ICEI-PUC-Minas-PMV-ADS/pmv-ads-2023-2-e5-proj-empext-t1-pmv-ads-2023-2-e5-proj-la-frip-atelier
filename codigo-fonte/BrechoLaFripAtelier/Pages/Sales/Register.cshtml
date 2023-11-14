@@ -1,6 +1,6 @@
 ﻿@page
 @using BrechoLaFripAtelier.Models;
-@model BrechoLaFripAtelier.Pages.Sales.CreateModel
+@model BrechoLaFripAtelier.Pages.Sales.RegisterModel
 
 @{
     ViewData["Title"] = "Registrar Venda";
@@ -14,10 +14,7 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Sale.ProductId" class="control-label"></label>
-                <select asp-for="Sale.ProductId" class ="form-control" asp-items="ViewBag.ProductId"></select>
-            </div>
+            <input type="hidden" asp-for="Sale.ProductId" value="@ViewBag.ProductId" />
             <div class="form-group">
                 <label asp-for="Sale.DateOfSale" class="control-label"></label>
                 <input asp-for="Sale.DateOfSale" class="form-control" />
