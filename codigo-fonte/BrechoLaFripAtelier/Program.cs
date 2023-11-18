@@ -9,6 +9,7 @@ builder.Services.AddRazorPages(options =>
 {
     options.Conventions.AuthorizeFolder("/Products");
     options.Conventions.AuthorizeFolder("/Partners");
+    options.Conventions.AuthorizeFolder("/Sales");
     options.Conventions.AuthorizePage("/Admins/Edit");
     options.Conventions.AuthorizePage("/Admins/Profile");
     options.Conventions.AuthorizePage("/Admins/Logout");
