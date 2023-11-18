@@ -1,5 +1,5 @@
 ﻿@page
-@model BrechoLaFripAtelier.Pages.Sales.IndexModel
+@model BrechoLaFripAtelier.Pages.Sales.ResultModel
 
 @{
     ViewData["Title"] = "Vendas";
@@ -9,7 +9,11 @@
 
 <div class="d-flex justify-content-between">
     <div class="mb-3 mt-3">
-        <a asp-page="" class="btn btn-primary">Voltar</a>
+        <a href="javascript:history.back()" class="btn btn-primary">Voltar</a>
+    </div>
+
+    <div class="mb-3 mt-3">
+        <a asp-page="SalesPerPartner" class="btn btn-primary">Por Parceira</a>
     </div>
 </div>
 

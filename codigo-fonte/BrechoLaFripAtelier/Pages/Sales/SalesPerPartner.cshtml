@@ -1,0 +1,58 @@
+﻿@page
+@model BrechoLaFripAtelier.Pages.Sales.SalesPerPartnerModel
+
+@{
+    ViewData["Title"] = "Vendas por Parceira";
+}
+
+<h1 class="mb-3 mt-5 display-4">Vendas por Parceira</h1>
+
+@if (Model.PartnerSalesSummaries.Any())
+{
+    <div class="d-flex justify-content-between">
+        <form method="get">
+            <div class="input-group mb-3 mt-3">
+                <input type="text" name="search" class="form-control" placeholder="Buscar...">
+                <button class="btn btn-outline-secondary" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </form>
+
+        <div class="mb-3 mt-3">
+            <a asp-page="Saleday" class="btn btn-primary">Por Dia</a>
+        </div>
+    </div>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Parceira</th>
+                <th>Total de Itens Vendidos</th>
+                <th>Saldo Total</th>
+                <th>Comissão Total</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var summary in Model.PartnerSalesSummaries)
+            {
+                <tr>
+                    <td>@summary.Partner.Name</td>
+                    <td>@summary.Quantity</td>
+                    <td>@summary.TotalPrice.ToString("C")</td>
+                    <td>@summary.TotalCommission.ToString("C")</td>
+                    <td>
+                        <a asp-page="Result" asp-route-id="@summary.Partner.Id" class="btn btn-secondary">
+                            Ver
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Nenhum dado de vendas encontrado.</p>
+}
