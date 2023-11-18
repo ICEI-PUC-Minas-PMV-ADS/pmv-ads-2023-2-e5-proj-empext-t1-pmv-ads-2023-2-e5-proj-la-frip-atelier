@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BrechoLaFripAtelier.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using BrechoLaFripAtelier.Models;
 
 namespace BrechoLaFripAtelier.Pages.Products
 {
     public class DetailsModel : PageModel
     {
-        private readonly BrechoLaFripAtelier.Models.MyDbContext _context;
+        private readonly MyDbContext _context;
 
-        public DetailsModel(BrechoLaFripAtelier.Models.MyDbContext context)
+        public DetailsModel(MyDbContext context)
         {
             _context = context;
         }
 
-      public Product Product { get; set; } = default!; 
+        public Product Product { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -27,12 +23,14 @@ namespace BrechoLaFripAtelier.Pages.Products
                 return NotFound();
             }
 
-            var product = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
+            var product = await _context.Products.Include(p => p.Partner)
+                                                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (product == null)
             {
                 return NotFound();
             }
-            else 
+            else
             {
                 Product = product;
             }

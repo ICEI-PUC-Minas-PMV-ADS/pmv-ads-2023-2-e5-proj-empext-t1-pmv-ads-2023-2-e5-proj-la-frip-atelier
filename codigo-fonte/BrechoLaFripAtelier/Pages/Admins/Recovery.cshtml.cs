@@ -2,7 +2,6 @@ using BrechoLaFripAtelier.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 
 namespace BrechoLaFripAtelier.Pages.Admins
 {

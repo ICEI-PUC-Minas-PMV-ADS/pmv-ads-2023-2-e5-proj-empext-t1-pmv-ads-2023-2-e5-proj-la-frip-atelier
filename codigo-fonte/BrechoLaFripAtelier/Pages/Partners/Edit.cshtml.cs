@@ -25,6 +25,7 @@ namespace BrechoLaFripAtelier.Pages.Partners
             }
 
             var partner = await _context.Partners.FirstOrDefaultAsync(m => m.Id == id);
+
             if (partner == null)
             {
                 return NotFound();

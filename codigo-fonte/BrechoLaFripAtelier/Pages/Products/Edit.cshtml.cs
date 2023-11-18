@@ -26,6 +26,7 @@ namespace BrechoLaFripAtelier.Pages.Products
             }
 
             var product = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
+
             if (product == null)
             {
                 return NotFound();

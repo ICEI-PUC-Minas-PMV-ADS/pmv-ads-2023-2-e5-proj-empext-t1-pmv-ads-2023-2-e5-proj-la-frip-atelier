@@ -17,21 +17,18 @@ namespace BrechoLaFripAtelier.Pages.Products
 
         public async Task OnGetAsync(string search)
         {
-            // Obtenha todos os produtos da base de dados
+
             IQueryable<Product> products = _context.Products;
 
-            // Se houver uma pesquisa, aplique o filtro
             if (!string.IsNullOrEmpty(search))
             {
                 products = products.Where(p => p.Name.Contains(search));
             }
 
-            // Carregue os resultados filtrados na propriedade Products
             if (_context.Products != null)
             {
-                Product = await products
-                .Include(p => p.Partner)
-                .ToListAsync();
+                Product = await products.Include(p => p.Partner)
+                                        .ToListAsync();
             }
         }
     }
