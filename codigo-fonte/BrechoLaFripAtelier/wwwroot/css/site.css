@@ -18,3 +18,9 @@ html {
   position: relative;
   min-height: 100%;
 }
+
+input,
+select,
+textarea {
+    outline: none !important;
+}

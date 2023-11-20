@@ -1,6 +1,6 @@
 ﻿@using System.Security.Claims;
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,13 +19,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-page="../Index">Início</a>
                         </li>
-                        <li>
-                            <a class="nav-link text-white" asp-page="/Sales/Saleday">Vendas</a>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a href="#" class="d-flex align-items-center nav-link text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Vendas
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                                    <li>
+                                        <a class="dropdown-item" asp-page="/Sales/SalesPerDay">Por Período</a>
+                                    </li>
+                                    <li><a class="dropdown-item" asp-page="/Sales/SalesPerPartner">Por Parceira</a></li>
+                                </ul>
+                            </div>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a class="nav-link text-white" asp-page="/Products/Index">Produtos</a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a class="nav-link text-white" asp-page="/Partners/Index">Parceiras</a>
                         </li>
                     </ul>
@@ -38,16 +49,12 @@
                             {
                                 <strong>@User.Identity.Name</strong>
                             }
-                            else
-                            {
-                                <strong>Usuário</strong>
-                            }
                         </a>
 
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
                             <li><a class="dropdown-item" asp-page="/Admins/Profile" asp-route-id="@User.FindFirstValue(ClaimTypes.NameIdentifier)">Perfil</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" asp-page="/Admins/Logout">Sair</a></li>
+                            <li><a class="dropdown-item" asp-page="/Admins/Logout">Desconectar</a></li>
                         </ul>
                     </div>
                 </div>

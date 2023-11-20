@@ -1,6 +1,6 @@
 ﻿@using System.Security.Claims;
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,31 +11,7 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row flex-nowrap">
-       
-                    <hr>
-
-                    <div class="dropdown">
-                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                            @if (User.Identity != null && User.Identity.IsAuthenticated)
-                            {
-                                <strong>@User.Identity.Name</strong>
-                            }
-                            else
-                            {
-                                <strong>Usuário</strong>
-                            }
-                        </a>
-
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                            <li><a class="dropdown-item" asp-page="/Admins/Profile" asp-route-id="@User.FindFirstValue(ClaimTypes.NameIdentifier)">Perfil</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" asp-page="/Admins/Logout">Sair</a></li>
-                        </ul>
-                    </div>
-                </div>
-            
-            <!-- Content -->
+        <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="container">
                     <main role="main" class="pb-3">
@@ -44,7 +20,8 @@
                 </div>
             </div>
         </div>
-    
+    </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
