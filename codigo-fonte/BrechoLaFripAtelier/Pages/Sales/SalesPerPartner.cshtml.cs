@@ -6,7 +6,6 @@ namespace BrechoLaFripAtelier.Pages.Sales
 {
     public class SalesPerPartnerModel : PageModel
     {
-
         private readonly MyDbContext _context;
 
         public SalesPerPartnerModel(MyDbContext context)
@@ -24,14 +23,19 @@ namespace BrechoLaFripAtelier.Pages.Sales
 
         public List<PartnerSalesSummary> PartnerSalesSummaries { get; set; } = new List<PartnerSalesSummary>();
 
-        public void OnGet()
+        public async Task OnGetAsync(string search)
         {
-
             var soldProducts = _context.Sales
                 .Include(s => s.Product)
-                .ThenInclude(p => p.Partner);
+                .ThenInclude(p => p.Partner)
+                .AsQueryable();
 
-            PartnerSalesSummaries = soldProducts
+            if (!string.IsNullOrEmpty(search))
+            {
+                soldProducts = soldProducts.Where(s => s.Product.Partner.Name.Contains(search));
+            }
+
+            PartnerSalesSummaries = await soldProducts
                 .GroupBy(s => s.Product.Partner)
                 .Select(g => new PartnerSalesSummary
                 {
@@ -40,7 +44,7 @@ namespace BrechoLaFripAtelier.Pages.Sales
                     TotalPrice = g.Sum(s => s.Product.Price)
                 })
                 .OrderByDescending(s => s.Quantity)
-                .ToList();
+                .ToListAsync();
         }
     }
 }
