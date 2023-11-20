@@ -1,18 +1,14 @@
 ﻿using BrechoLaFripAtelier.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BrechoLaFripAtelier.Pages.Sales
 {
-    public class SaledayModel : PageModel
+    public class SalesPerDayModel : PageModel
     {
         private readonly MyDbContext _context;
 
-        public SaledayModel(MyDbContext context)
+        public SalesPerDayModel(MyDbContext context)
         {
             _context = context;
         }
