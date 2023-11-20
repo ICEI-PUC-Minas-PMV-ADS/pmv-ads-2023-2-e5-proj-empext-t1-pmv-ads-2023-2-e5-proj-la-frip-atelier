@@ -1,0 +1,46 @@
+﻿@page
+@model BrechoLaFripAtelier.Pages.Partners.DetailsModel
+
+@{
+    ViewData["Title"] = "Detailhes";
+}
+
+<h1 class="mb-3 mt-5 display-4">Parceiras</h1>
+
+<h4>Detalhes</h4>
+<hr />
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Partner.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Partner.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Partner.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Partner.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Partner.CPFnumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Partner.CPFnumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Partner.Commission)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Partner.Commission)%
+        </dd>
+
+        <div class="d-flex justify-content-between col-md-4 mt-3">
+            <a href="javascript:history.back()" class="btn btn-secondary">Voltar</a>
+            <a asp-page="./Edit" asp-route-id="@Model.Partner?.Id" class="btn btn-primary">
+                Editar
+            </a>
+        </div>
+    </dl>
+</div>
