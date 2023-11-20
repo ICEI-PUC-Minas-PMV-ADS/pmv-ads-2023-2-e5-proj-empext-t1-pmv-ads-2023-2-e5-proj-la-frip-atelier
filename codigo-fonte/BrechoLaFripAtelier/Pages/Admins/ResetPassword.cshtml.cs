@@ -17,14 +17,12 @@ namespace BrechoLaFripAtelier.Pages.Admins
         [BindProperty]
         public string NewPassword { get; set; }
 
+        [BindProperty]
         public string ConfirmPassword { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
-
-            int adminId = 1;
-
-            var admin = await _context.Admins.FindAsync(adminId);
+            var admin = await _context.Admins.FirstOrDefaultAsync();
 
             if (admin == null)
             {
@@ -33,10 +31,9 @@ namespace BrechoLaFripAtelier.Pages.Admins
 
             if (NewPassword != ConfirmPassword)
             {
-                ModelState.AddModelError("ConfirmPassword", "As senhas n�o coincidem.");
+                ModelState.AddModelError("ConfirmPassword", "As senhas não coincidem.");
             }
 
-            // Atualize a senha do administrador
             admin.Password = BCrypt.Net.BCrypt.HashPassword(NewPassword);
 
             _context.Entry(admin).State = EntityState.Modified;
@@ -44,16 +41,14 @@ namespace BrechoLaFripAtelier.Pages.Admins
             try
             {
                 await _context.SaveChangesAsync();
-                // Armazene a mensagem de sucesso para mostrar na pr�xima requisi��o
+
                 TempData["SuccessMessage"] = "Senha alterada com sucesso!";
             }
             catch (DbUpdateConcurrencyException)
             {
-                // Trate exce��es de concorr�ncia, se necess�rio
                 throw;
             }
 
-            // Continua na pagina ResetPassword.cs.html
             return Page();
         }
     }
