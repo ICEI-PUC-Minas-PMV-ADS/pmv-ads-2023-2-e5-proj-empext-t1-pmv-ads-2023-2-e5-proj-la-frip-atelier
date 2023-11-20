@@ -24,3 +24,12 @@ select,
 textarea {
     outline: none !important;
 }
+
+.disabled-select {
+    pointer-events: none;
+    touch-action: none;
+    appearance: none;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    cursor: not-allowed;
+}

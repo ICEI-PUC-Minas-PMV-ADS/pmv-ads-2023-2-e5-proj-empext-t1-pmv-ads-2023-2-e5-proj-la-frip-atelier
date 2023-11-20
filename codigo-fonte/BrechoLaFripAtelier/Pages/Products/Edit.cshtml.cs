@@ -31,8 +31,11 @@ namespace BrechoLaFripAtelier.Pages.Products
             {
                 return NotFound();
             }
+
             Product = product;
+
             ViewData["PartnerId"] = new SelectList(_context.Partners, "Id", "CPFnumber");
+
             return Page();
         }
 

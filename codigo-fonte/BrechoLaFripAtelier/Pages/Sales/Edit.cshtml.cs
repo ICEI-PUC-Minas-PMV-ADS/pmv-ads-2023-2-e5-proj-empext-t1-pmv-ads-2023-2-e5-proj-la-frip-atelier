@@ -60,7 +60,7 @@ namespace BrechoLaFripAtelier.Pages.Sales
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./SalesPerDay");
         }
 
         private bool SaleExists(int id)

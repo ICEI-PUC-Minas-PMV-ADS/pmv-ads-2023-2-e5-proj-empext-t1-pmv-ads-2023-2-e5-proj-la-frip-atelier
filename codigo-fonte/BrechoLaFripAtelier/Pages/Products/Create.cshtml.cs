@@ -34,6 +34,11 @@ namespace BrechoLaFripAtelier.Pages.Products
             _context.Products.Add(Product);
             await _context.SaveChangesAsync();
 
+            if (Product.Status == ProductStatus.Vendido)
+            {
+                return RedirectToPage("../Sales/Register", new { productId = Product.Id });
+            }
+
             return RedirectToPage("./Index");
         }
     }
