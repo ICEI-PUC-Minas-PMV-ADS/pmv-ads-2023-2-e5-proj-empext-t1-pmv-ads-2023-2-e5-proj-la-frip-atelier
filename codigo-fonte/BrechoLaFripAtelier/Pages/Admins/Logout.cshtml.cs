@@ -9,6 +9,8 @@ namespace BrechoLaFripAtelier.Pages.Admins
         {
             await HttpContext.SignOutAsync();
 
+            TempData.Clear();
+
             return Page();
         }
     }

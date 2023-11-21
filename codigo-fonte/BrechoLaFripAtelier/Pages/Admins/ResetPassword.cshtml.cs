@@ -20,6 +20,18 @@ namespace BrechoLaFripAtelier.Pages.Admins
         [BindProperty]
         public string ConfirmPassword { get; set; }
 
+
+        public IActionResult OnGet(string vToken)
+        {
+            if (string.IsNullOrEmpty(vToken) || !vToken.Equals(HttpContext.Session.GetString("VerificationToken")))
+            {
+                return RedirectToPage("AccessDenied");
+            }
+
+            return Page();
+        }
+
+
         public async Task<IActionResult> OnPostAsync()
         {
             var admin = await _context.Admins.FirstOrDefaultAsync();

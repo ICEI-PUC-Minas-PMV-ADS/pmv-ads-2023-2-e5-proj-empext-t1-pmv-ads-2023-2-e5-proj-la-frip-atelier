@@ -23,12 +23,14 @@ namespace BrechoLaFripAtelier.Pages.Admins
         [BindProperty]
         public string SecurityResponse { get; set; }
 
+
         public async Task OnGetAsync()
         {
             var admin = await _context.Admins.FirstOrDefaultAsync();
 
             SecurityQuestion = admin?.SecurityQuestion;
         }
+
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -45,7 +47,11 @@ namespace BrechoLaFripAtelier.Pages.Admins
                 return Page();
             }
 
-            return RedirectToPage("ResetPassword");
+            string vToken = Guid.NewGuid().ToString();
+
+            HttpContext.Session.SetString("VerificationToken", vToken);
+
+            return RedirectToPage("ResetPassword", new { vToken });
         }
     }
 }
