@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BrechoLaFripAtelier.styles.css" asp-append-version="true" />
+    @await Html.PartialAsync("_Favicons")
 </head>
 <body>
     <div class="container-fluid">
@@ -18,6 +19,12 @@
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-page="../Index">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-page="/Partners/Index">Parceiras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-page="/Products/Index">Produtos</a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
@@ -32,12 +39,6 @@
                                     <li><a class="dropdown-item" asp-page="/Sales/SalesPerPartner">Por Parceira</a></li>
                                 </ul>
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-page="/Products/Index">Produtos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-page="/Partners/Index">Parceiras</a>
                         </li>
                     </ul>
 
