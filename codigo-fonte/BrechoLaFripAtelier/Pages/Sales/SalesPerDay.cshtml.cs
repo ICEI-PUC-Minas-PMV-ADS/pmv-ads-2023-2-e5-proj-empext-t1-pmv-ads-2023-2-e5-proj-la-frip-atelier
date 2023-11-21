@@ -39,7 +39,9 @@ namespace BrechoLaFripAtelier.Pages.Sales
                     TotalItemsSold = group.Count(),
                     TotalAmount = group.Sum(s => s.Product.Price)
                 })
-                .OrderByDescending(s => s.Date)
+                .OrderByDescending(s => s.Date.Year)
+                .ThenByDescending(s => s.Date.Month)
+                .ThenByDescending(s => s.Date.Day)
                 .ToListAsync();
 
             SalesByDay = salesByDay;

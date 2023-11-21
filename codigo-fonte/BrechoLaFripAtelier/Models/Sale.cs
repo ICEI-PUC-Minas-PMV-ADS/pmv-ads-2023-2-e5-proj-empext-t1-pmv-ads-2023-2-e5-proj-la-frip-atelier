@@ -28,6 +28,7 @@ namespace BrechoLaFripAtelier.Models
     public enum CommissionStatus
     {
         Pendente,
-        Pago
+        Pago,
+        Indisponível
     }
 }

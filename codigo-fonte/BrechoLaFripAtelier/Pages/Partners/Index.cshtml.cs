@@ -27,7 +27,9 @@ namespace BrechoLaFripAtelier.Pages.Partners
 
             if (_context.Partners != null)
             {
-                Partner = await partners.ToListAsync();
+                Partner = await partners
+                    .OrderBy(p => p.Name)
+                    .ToListAsync();
             }
         }
     }

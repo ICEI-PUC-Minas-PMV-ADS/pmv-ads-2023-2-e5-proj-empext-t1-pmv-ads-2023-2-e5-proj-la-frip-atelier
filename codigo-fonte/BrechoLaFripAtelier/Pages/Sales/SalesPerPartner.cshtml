@@ -42,14 +42,31 @@
             @foreach (var summary in Model.PartnerSalesSummaries)
             {
                 <tr>
-                    <td>@summary.Partner.Name</td>
+                    @if (summary.Partner != null)
+                    {
+                        <td>@summary.Partner.Name</td>
+                    }
+                    else
+                    {
+                        <td>[Nenhuma parceira]</td>
+                    }
                     <td>@summary.Quantity</td>
                     <td>@summary.TotalPrice.ToString("C")</td>
                     <td>@summary.TotalCommission.ToString("C")</td>
                     <td>
-                        <a asp-page="Result" asp-route-partnerId="@summary.Partner.Id" class="btn btn-info disable-to-print">
-                            <i class="bi bi-eye"></i>
-                        </a>
+                        @if (summary.Partner != null)
+                        {
+                            <a asp-page="Result" asp-route-partnerId="@summary.Partner.Id" class="btn btn-info disable-to-print">
+                                <i class="bi bi-eye"></i>
+                            </a>
+                        }
+                        else
+                        {
+                            <a asp-page="Result" asp-route-partnerId="-1" class="btn btn-info disable-to-print">
+                                <i class="bi bi-eye"></i>
+                            </a>
+                        }
+                        
                     </td>
                 </tr>
             }

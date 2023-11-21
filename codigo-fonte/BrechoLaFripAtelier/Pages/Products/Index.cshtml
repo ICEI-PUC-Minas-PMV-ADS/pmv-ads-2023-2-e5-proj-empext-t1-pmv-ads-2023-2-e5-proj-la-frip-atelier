@@ -62,9 +62,16 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Price)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Partner.Name)
-                    </td>
+                    @if (item.Partner != null)
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Partner.Name)
+                        </td>
+                    }
+                    else
+                    {
+                        <td>[Nenhuma parceira]</td>
+                    }
                     <td>
                         @Html.DisplayFor(modelItem => item.Status)
                     </td>

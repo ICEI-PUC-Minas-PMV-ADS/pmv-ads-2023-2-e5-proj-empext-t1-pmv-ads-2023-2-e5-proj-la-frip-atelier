@@ -25,7 +25,13 @@ namespace BrechoLaFripAtelier.Pages.Sales
 
             IQueryable<Sale> sales = _context.Sales;
 
-            if (partnerId != null)
+            if (partnerId == -1)
+            {
+                sales = sales.Where(s => s.Product.Partner.Id == null);
+                
+            }
+
+            if (partnerId != null && partnerId != -1)
             {
                 sales = sales.Where(s => s.Product.Partner.Id == partnerId);
             }
@@ -38,6 +44,7 @@ namespace BrechoLaFripAtelier.Pages.Sales
 
             Sale = await sales.Include(s => s.Product)
                               .ThenInclude(p => p.Partner)
+                              .OrderBy(s => s.Product.Name)
                               .ToListAsync();
 
             return Page();

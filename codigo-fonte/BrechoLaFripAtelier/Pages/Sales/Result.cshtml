@@ -51,11 +51,18 @@
                         @Html.DisplayFor(modelItem => item.Product.Name)
                     </a>
                 </td>
-                <td>
-                    <a asp-page="../Partners/Details" asp-route-id="@item.Product.Partner.Id">
-                        @Html.DisplayFor(modelItem => item.Product.Partner.Name)
-                    </a>
-                </td>
+                @if (item.Product.Partner != null)
+                {
+                    <td>
+                        <a asp-page="../Partners/Details" asp-route-id="@item.Product.Partner.Id">
+                            @Html.DisplayFor(modelItem => item.Product.Partner.Name)
+                        </a>
+                    </td>
+                }
+                else
+                {
+                    <td>[Nenhuma parceira]</td>
+                }
                 <td>
                     @Html.DisplayFor(modelItem => item.DateOfSale)
                 </td>

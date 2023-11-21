@@ -32,7 +32,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="Product.PartnerId" class="control-label"></label>
-                <select asp-for="Product.PartnerId" class="form-control" asp-items="ViewBag.PartnerId"></select>
+                <select asp-for="Product.PartnerId" class="form-control" asp-items="ViewBag.PartnerId">
+                    <option value="">Nenhuma parceira</option>
+                </select>
                 <span asp-validation-for="Product.PartnerId" class="text-danger"></span>
             </div>
             <div class="form-group">

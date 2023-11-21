@@ -28,6 +28,7 @@ namespace BrechoLaFripAtelier.Pages.Products
             if (_context.Products != null)
             {
                 Product = await products.Include(p => p.Partner)
+                                        .OrderBy(p => p.Name)
                                         .ToListAsync();
             }
         }

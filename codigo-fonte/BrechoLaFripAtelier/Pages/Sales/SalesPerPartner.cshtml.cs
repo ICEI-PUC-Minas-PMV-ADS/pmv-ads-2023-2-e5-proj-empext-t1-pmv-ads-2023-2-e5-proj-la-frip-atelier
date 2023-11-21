@@ -43,7 +43,7 @@ namespace BrechoLaFripAtelier.Pages.Sales
                     Quantity = g.Count(),
                     TotalPrice = g.Sum(s => s.Product.Price)
                 })
-                .OrderByDescending(s => s.Quantity)
+                .OrderBy(s => s.Partner.Name)
                 .ToListAsync();
         }
     }

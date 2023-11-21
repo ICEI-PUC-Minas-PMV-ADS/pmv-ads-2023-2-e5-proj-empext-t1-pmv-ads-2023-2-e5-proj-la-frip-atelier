@@ -24,7 +24,7 @@ namespace BrechoLaFripAtelier.Models
         public decimal Price { get; set; }
 
         [Display(Name = "Parceira")]
-        public int PartnerId { get; set; }
+        public int? PartnerId { get; set; }
 
         [Display(Name = "Parceira")]
         public Partner? Partner { get; set; }
