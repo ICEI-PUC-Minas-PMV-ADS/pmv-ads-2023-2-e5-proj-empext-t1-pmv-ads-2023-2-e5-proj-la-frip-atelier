@@ -1,4 +1,5 @@
 ﻿using BrechoLaFripAtelier.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,8 +16,13 @@ namespace BrechoLaFripAtelier.Pages.Sales
 
         public IList<Sale> Sale { get; set; } = default!;
 
-        public async Task OnGetAsync(int? partnerId,string? date)
+        public async Task<IActionResult> OnGetAsync(int? partnerId, string? date)
         {
+            if (partnerId == null && date == null || _context.Sales == null)
+            {
+                return NotFound();
+            }
+
             IQueryable<Sale> sales = _context.Sales;
 
             if (partnerId != null)
@@ -33,6 +39,8 @@ namespace BrechoLaFripAtelier.Pages.Sales
             Sale = await sales.Include(s => s.Product)
                               .ThenInclude(p => p.Partner)
                               .ToListAsync();
+
+            return Page();
         }
     }
 }
