@@ -31,6 +31,12 @@
                 Preço
             </th>
             <th>
+                Comissão
+            </th>
+            <th>
+                Lucro
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Sale[0].Status)
             </th>
             <th></th>
@@ -55,6 +61,20 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Product.Price)
+                </td>
+                <td>
+                    @{
+                        var commissionValue = item.Product.Price * (item.Product.Partner?.Commission ?? 0) / 100;
+                    }
+
+                    @commissionValue.ToString("C")
+                </td>
+                <td>
+                    @{
+                        var profit = item.Product.Price - commissionValue;
+                    }
+
+                    @profit.ToString("C")
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Status)
