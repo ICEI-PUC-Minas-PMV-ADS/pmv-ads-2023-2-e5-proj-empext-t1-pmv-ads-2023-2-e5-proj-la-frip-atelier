@@ -19,12 +19,12 @@ html {
   min-height: 100%;
 }
 
-input,
-select,
-textarea {
+/*Pergunta de segurança na tela de recuperação*/
+input#SecurityQuestion {
     outline: none !important;
 }
 
+/*seletor de produto na tela de edição de vendas*/
 .disabled-select {
     pointer-events: none;
     touch-action: none;
@@ -33,3 +33,26 @@ textarea {
     color: #6c757d;
     cursor: not-allowed;
 }
+
+/*regras para impressão*/
+@media print {
+    @page {
+        max-height: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        display: none; 
+    }
+
+    .disable-to-print {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}  

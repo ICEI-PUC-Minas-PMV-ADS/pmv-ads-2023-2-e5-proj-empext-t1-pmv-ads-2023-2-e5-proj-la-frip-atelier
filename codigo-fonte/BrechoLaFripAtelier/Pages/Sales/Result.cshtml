@@ -7,10 +7,12 @@
 
 <h1 class="mb-3 mt-5 display-4">Vendas</h1>
 
-<div class="d-flex justify-content-between">
-    <div class="mb-3 mt-3">
-        <a href="javascript:history.back()" class="btn btn-secondary">Voltar</a>
-    </div>
+<div class="d-flex justify-content-between mb-3 mt-3">
+    <a href="javascript:history.back()" class="btn btn-secondary disable-to-print">Voltar</a>
+
+    <button type="button" class="btn btn-secondary btn-sm disable-to-print" onclick="javascript:window.print()">
+        <i class="bi bi-printer"></i> Imprimir
+    </button>
 </div>
 
 <table class="table table-striped table-hover">
@@ -58,7 +60,7 @@
                     @Html.DisplayFor(modelItem => item.Status)
                 </td>
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-secondary">
+                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-secondary disable-to-print">
                         <i class="bi bi-pencil-square"></i>
                     </a>
                 </td>
