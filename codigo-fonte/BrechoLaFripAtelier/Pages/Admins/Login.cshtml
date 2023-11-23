@@ -6,8 +6,6 @@
     Layout = "_Layout1";
 }
 
-<h1></h1>
-
 <h1 class="text-center mb-3 mt-5 display-4">LOGIN</h1>
 
 <div class="row">
@@ -25,7 +23,7 @@
                 <span asp-validation-for="Admin.Password" class="text-danger"></span>
             </div>
 
-            @if (Model.AdminsExist)
+            @if (Model.AdminExist)
             {
                 <a asp-page="Recovery">Recuperar senha</a>
             }

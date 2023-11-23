@@ -24,11 +24,14 @@ namespace BrechoLaFripAtelier.Pages.Admins
         public string SecurityResponse { get; set; }
 
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
-            var admin = await _context.Admins.FirstOrDefaultAsync();
+            if (User.Identity.IsAuthenticated) return RedirectToPage("../Index");
 
+            var admin = await _context.Admins.FirstOrDefaultAsync();
             SecurityQuestion = admin?.SecurityQuestion;
+
+            return admin == null ? RedirectToPage("./AccessDenied") : Page();
         }
 
 
@@ -39,7 +42,6 @@ namespace BrechoLaFripAtelier.Pages.Admins
             if (!adminValid)
             {
                 var admin = await _context.Admins.FirstOrDefaultAsync();
-
                 SecurityQuestion = admin?.SecurityQuestion;
 
                 TempData["ErrorMessage"] = "Resposta de segurança incorreta.";

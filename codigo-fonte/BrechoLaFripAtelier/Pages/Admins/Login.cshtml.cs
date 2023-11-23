@@ -11,16 +11,18 @@ namespace BrechoLaFripAtelier.Pages.Admins
     {
         private readonly MyDbContext _context;
 
-        public bool AdminsExist { get; set; }
+        public bool AdminExist { get; set; }
 
         public LoginModel(MyDbContext context)
         {
             _context = context;
         }
 
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGetAsync()
         {
-            AdminsExist = _context.Admins.Any();
+            if (User.Identity.IsAuthenticated) return RedirectToPage("../Index");
+
+            AdminExist = await _context.Admins.AnyAsync();
 
             return Page();
         }
@@ -30,11 +32,15 @@ namespace BrechoLaFripAtelier.Pages.Admins
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (Admin.Username == "Admin" && Admin.Password == "12345678")
+            if (Admin.Username == "admin" && Admin.Password == "abcde123")
             {
                 if (!_context.Admins.Any())
                 {
-                    return RedirectToPage("./Register");
+                    string vToken = Guid.NewGuid().ToString();
+
+                    HttpContext.Session.SetString("VerificationToken", vToken);
+
+                    return RedirectToPage("./Register", new { vToken });
                 }
                 else
                 {
@@ -82,7 +88,7 @@ namespace BrechoLaFripAtelier.Pages.Admins
                 }
             }
 
-            AdminsExist = _context.Admins.Any();
+            AdminExist = await _context.Admins.AnyAsync();
 
             return Page();
         }

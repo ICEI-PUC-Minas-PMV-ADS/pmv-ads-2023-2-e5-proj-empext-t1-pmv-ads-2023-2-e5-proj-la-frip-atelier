@@ -1,6 +1,7 @@
 ﻿using BrechoLaFripAtelier.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace BrechoLaFripAtelier.Pages.Admins
 {
@@ -13,8 +14,15 @@ namespace BrechoLaFripAtelier.Pages.Admins
             _context = context;
         }
 
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGetAsync(string vToken)
         {
+            if (User.Identity.IsAuthenticated) return RedirectToPage("../Index");
+
+            if (string.IsNullOrEmpty(vToken) || !vToken.Equals(HttpContext.Session.GetString("VerificationToken")))
+            {
+                return RedirectToPage("AccessDenied");
+            }
+
             return Page();
         }
 
