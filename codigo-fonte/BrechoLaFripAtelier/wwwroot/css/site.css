@@ -1,7 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
 html {
-  font-size: 14px;
+    font-size: 14px;
+    scroll-behavior: smooth;
 }
 
 @media (min-width: 768px) {
@@ -56,3 +57,14 @@ input#SecurityQuestion {
         color: inherit;
     }
 }  
+
+/*regras do botão de voltar ao topo*/
+.btn-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    visibility: hidden;
+}
+    .btn-top.show {
+        visibility: visible;
+    }

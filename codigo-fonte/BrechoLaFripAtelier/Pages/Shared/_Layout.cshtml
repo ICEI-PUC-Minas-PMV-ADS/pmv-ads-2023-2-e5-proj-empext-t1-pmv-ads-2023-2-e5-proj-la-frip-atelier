@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="~/BrechoLaFripAtelier.styles.css" asp-append-version="true" />
     @await Html.PartialAsync("_Favicons")
 </head>
-<body>
+<body id="top">
     <div class="container-fluid">
         <div class="row flex-nowrap">
             <!-- Sidebar -->
@@ -71,6 +71,11 @@
             </div>
         </div>
     </div>
+
+    <a href="#top" class="btn btn-outline-primary btn-top disable-to-print">
+        <i class="bi bi-arrow-up"></i>
+        Topo
+    </a>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -2,3 +2,13 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+const botao = document.querySelector('.btn-top');
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+        botao.classList.add('show');
+    } else {
+        botao.classList.remove('show');
+    }
+});
