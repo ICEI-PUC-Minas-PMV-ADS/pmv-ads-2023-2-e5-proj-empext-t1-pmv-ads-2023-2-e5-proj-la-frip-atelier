@@ -4,10 +4,39 @@
     ViewData["Title"] = "Início";
 }
 
-<div class="mb-3 mt-5">
+<div class="container mt-5">
     @if (User.Identity != null && User.Identity.IsAuthenticated)
     {
-        <h1 class="display-2">Olá, @User.Identity.Name!</h1>
-        <p class="mt-5 display-6">Aqui estão algumas informações da empresa</p>
+        <h1 class="display-4">Olá, @User.Identity.Name!</h1>
+        <p class="lead mt-4">Aqui estão algumas informações da empresa</p>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card h-100 d-flex align-items-center bg-light">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Itens Cadastrados</h5>
+                        <p class="card-text">@ViewData["TotalItemsCadastrados"]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 d-flex align-items-center bg-light">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Itens Vendidos Hoje</h5>
+                        <p class="card-text">@ViewData["TotalItemsVendidosNoDia"]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 d-flex align-items-center bg-light">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Parceiras Aguardando Pagamento</h5>
+                        <p class="card-text">@ViewData["ParceirasAguardandoPagamento"]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     }
 </div>
