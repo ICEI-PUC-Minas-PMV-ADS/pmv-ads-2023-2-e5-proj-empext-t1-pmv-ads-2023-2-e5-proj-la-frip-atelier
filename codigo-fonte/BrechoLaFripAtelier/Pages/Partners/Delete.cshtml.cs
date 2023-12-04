@@ -47,12 +47,22 @@ namespace BrechoLaFripAtelier.Pages.Partners
 
             if (partner != null)
             {
+                if (HasAssociatedProducts(partner))
+                {
+                    return RedirectToPage("../Admins/AccessDenied");
+                }
+
                 Partner = partner;
                 _context.Partners.Remove(Partner);
                 await _context.SaveChangesAsync();
             }
 
             return RedirectToPage("./Index");
+        }
+
+        private bool HasAssociatedProducts(Partner partner)
+        {
+            return _context.Products.Any(s => s.PartnerId == partner.Id);
         }
     }
 }

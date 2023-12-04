@@ -15,6 +15,7 @@ FROM build AS publish
 RUN dotnet publish "BrechoLaFripAtelier.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
+ENV ASPNETCORE_ENVIRONMENT Production
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "BrechoLaFripAtelier.dll"]

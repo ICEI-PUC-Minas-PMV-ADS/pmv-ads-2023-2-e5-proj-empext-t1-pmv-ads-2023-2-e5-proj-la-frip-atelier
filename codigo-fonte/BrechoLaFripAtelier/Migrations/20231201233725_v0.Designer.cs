@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BrechoLaFripAtelier.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20231121163927_v5")]
-    partial class v5
+    [Migration("20231201233725_v0")]
+    partial class v0
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,6 +21,8 @@ namespace BrechoLaFripAtelier.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.14")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            MySqlModelBuilderExtensions.HasCharSet(modelBuilder, null, DelegationModes.ApplyToDatabases);
 
             modelBuilder.Entity("BrechoLaFripAtelier.Models.Admin", b =>
                 {
@@ -144,9 +146,7 @@ namespace BrechoLaFripAtelier.Migrations
                 {
                     b.HasOne("BrechoLaFripAtelier.Models.Product", "Product")
                         .WithMany("Sales")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProductId");
 
                     b.Navigation("Product");
                 });

@@ -19,6 +19,8 @@ namespace BrechoLaFripAtelier.Migrations
                 .HasAnnotation("ProductVersion", "7.0.14")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            MySqlModelBuilderExtensions.HasCharSet(modelBuilder, null, DelegationModes.ApplyToDatabases);
+
             modelBuilder.Entity("BrechoLaFripAtelier.Models.Admin", b =>
                 {
                     b.Property<int>("Id")
@@ -141,9 +143,7 @@ namespace BrechoLaFripAtelier.Migrations
                 {
                     b.HasOne("BrechoLaFripAtelier.Models.Product", "Product")
                         .WithMany("Sales")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProductId");
 
                     b.Navigation("Product");
                 });

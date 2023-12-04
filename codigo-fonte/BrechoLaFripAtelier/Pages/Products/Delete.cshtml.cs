@@ -48,12 +48,22 @@ namespace BrechoLaFripAtelier.Pages.Products
 
             if (product != null)
             {
+                if (HasAssociatedSales(product) || product.Status == ProductStatus.Vendido)
+                {
+                    return RedirectToPage("../Admins/AccessDenied");
+                }
+
                 Product = product;
                 _context.Products.Remove(Product);
                 await _context.SaveChangesAsync();
             }
 
             return RedirectToPage("./Index");
+        }
+
+        private bool HasAssociatedSales(Product product)
+        {
+            return _context.Sales.Any(s => s.ProductId == product.Id);
         }
     }
 }
