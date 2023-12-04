@@ -42,12 +42,12 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 |Caso de teste 08     | CT 08 - Realizar Consulta de Porcentagem de Valor Repassado a Parceira |
 |-------|-------------------------
 |Objetivo do teste| Verificar a funcionalidade de consulta de porcentagem de valor repassado a parceira. |
-| Resultado | Todos os critérios de exito foram satisfeitos adequadamente. |
+| Resultado | Todos os critérios de exito foram satisfeitos adequadamente.<br>|
 
 |Caso de teste 01     | CT 01 - Cadastro de conta de usuário |
 ![cadastro](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-proj-la-frip-atelier/assets/91163177/3c11b298-033c-4cf2-92c0-f33683ee614f)
 
-![login](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-proj-la-frip-atelier/assets/91163177/6c0bdff3-8b7c-4c46-8522-2283d84858f9)
+![login](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-proj-la-frip-atelier/assets/91163177/6c0bdff3-8b7c-4c46-8522-2283d84858f9)<br>|
 
 
 ![home](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e5-proj-empext-t1-pmv-ads-2023-2-e5-proj-la-frip-atelier/assets/91163177/874fe1d7-3217-4529-b561-62cd366ba48b)
