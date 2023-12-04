@@ -77,7 +77,7 @@ As tabelas abaixo demonstram cada caso de teste:
  4- Usuário clica na página "Produtos" no side bar no lado esquerdo da página.<br>
  5- Usuário ao acessar a página de "Produtos" o usuário encontrará um campo para busca(onde poderá digitar o nome do produto) e o sistema deve mostrar os produtos cadastrados com as informações nome, tamanho, preço, parceira, status do produto. O usuário também terá a opção de deletar o produto ou editar algum dado do mesmo.</th></tr>   
 <tr><th>Critérios de Êxito</th>	
-  <th>•	O usuário deverá ser capaz de consultar um produto cadastrado utilizando o campo de busca.</th></tr>
+  <th>•	O usuário deverá ser capaz de consultar um produto cadastrado utilizando o campo de busca.<br>•O usuário deverá visualizar as informações do produto como: nome completo, tamanho, preço, nome da parceira, status do produto.</th></tr>
   </table>
   
   <table> 
@@ -92,7 +92,7 @@ As tabelas abaixo demonstram cada caso de teste:
  4- Usuário clica na página "Produtos" no side bar no lado esquerdo da página.<br>
  5- Usuário ao acessar a página de "Produtos" o usuário encontrará um campo para busca(onde poderá digitar o nome do produto) e o sistema deve mostrar os produtos cadastrados com as informações nome, tamanho, preço, parceira, status do produto. O usuário também terá a opção de deletar o produto ou editar algum dado do mesmo.</th></tr>
 <tr><th>Critérios de Êxito</th>	
-  <th>•	O usuário deverá ser capaz de consultar um produto cadastrado utilizando o campo de busca.</th></tr>
+  <th>•	O usuário deverá ser capaz de consultar um produto cadastrado utilizando o campo de busca.<br>•O usuário deverá visualizar as informações do produto como: nome completo, tamanho, preço, nome da parceira, status do produto.</th></tr>
   </table>
 
  <table> 
@@ -107,7 +107,7 @@ As tabelas abaixo demonstram cada caso de teste:
  4- Usuário clica na página "Vendas" no side bar no lado esquerdo da página.<br>
  5- Usuário ao acessar a página de "Vendas" o usuário encontrará um campo para selecionar o período inicial e o final de vendas.</th></tr>  
 <tr><th>Critérios de Êxito</th>	
-  <th>•	O usuário deverá ser capaz de consultar valores de vendas diárias e valores por período.<br>•</th></tr>
+  <th>•	O usuário deverá ser capaz de consultar valores de vendas diárias e valores por período.<br>•O usuário deverá visualizar as informações do produto como: data, total de itens vendidos, saldo total e um botão de ação "Ver".</th></tr>
   </table>
   
    <table> 
@@ -122,5 +122,5 @@ As tabelas abaixo demonstram cada caso de teste:
  4- Usuário clica na página "Vendas" no side bar no lado esquerdo da página.<br>
  5- Ao acessar a página de "Vendas" o usuário encontrará um campo para selecionar o período inicial e o final de vendas. Ao selecionar um período o usuário terá as informações do total de itens vendidos na data e deve clicar no botão "Ver" que levará a tela de resultados de todas as vendas do dia e deverá clicar no botão "Por Parceira" para ver os resultados de vendas vinculadas a cada parceira e assim conseguir verificar a comissão total que deve ser repassada.</th></tr>
 <tr><th>Critérios de Êxito</th>	
-  <th>•	O usuário deverá ser capaz de consultar de Porcentagem de valor repassado a parceira.</th></tr>
+  <th>•	O usuário deverá ser capaz de consultar de Porcentagem de valor repassado a parceira.<br>•O usuário deverá visualizar as informações do parceira como: nome, total de itens vendidos, saldo total, comissão total e um botão "Ver" para mais detalhes.</th></tr>
   </table>
