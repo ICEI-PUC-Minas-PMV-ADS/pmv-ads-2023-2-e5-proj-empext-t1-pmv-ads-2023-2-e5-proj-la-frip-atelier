@@ -26,11 +26,14 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 # Documentação
 
 <ol>
-<li><a href="documentos/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
-<li><a href="documentos/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
-<li><a href="documentos/03-Projeto de Interface.md"> Projeto de Interface</a></li>
-<li><a href="documentos/04-Testes de Software.md"> Testes de Software</a></li>
-<li><a href="documentos/05-Implantação.md"> Implantação</a></li>
+    <li><a href="documentos/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
+    <li><a href="documentos/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
+    <li><a href="documentos/03-Projeto de Interface.md"> Projeto de Interface</a></li>
+    <li><a href="documentos/04-Plano de Testes de Software.md"> Plano de Testes de Software</a></li>
+    <li><a href="documentos/05-Registro de Testes de Software.md"> Registro de Testes de Software</a></li>
+    <li><a href="documentos/06-Plano de Testes de Usabilidade.md"> Plano de Testes de Usabilidade</a></li>
+    <li><a href="documentos/07-Registro de Testes de Usabilidade.md"> Registro de Testes de Usabilidade</a></li>
+    <li><a href="documentos/08-Implantação.md"> Implantação</a></li>
 </ol>
 
 # Código
